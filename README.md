@@ -9,7 +9,7 @@ Started: May 2026
 
 | # | Topic | Progress |
 |---|-------|----------|
-| 1 | Foundation | 8/10 |
+| 1 | Foundation | 2/10 |
 | 2 | Arrays | 0/9 |
 | 3 | Linked List | 0/14 |
 | 4 | Strings | 0/19 |
