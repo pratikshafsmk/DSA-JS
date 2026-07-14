@@ -3,9 +3,9 @@
 // Difficulty: Easy
 // Link     :https://namastedev.com/practice/find-smallest-number
 // ================================
-// Approach : Convert the number to a string and use built-in methods like split, reverse, and join.
+// Approach : Use a single loop to iterate through the array and keep track of the smallest number found so far. If a smaller number is found, update the smallest number. Return the smallest number after the loop completes.
 // Time     : O(n)
-// Space    : O(n)
+// Space    : O(1)
 //
 // ================================
 

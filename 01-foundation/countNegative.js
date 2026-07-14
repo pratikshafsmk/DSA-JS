@@ -1,22 +1,31 @@
 // ================================
-// Problem  : 1796. Second Largest Digit in a String
+// Problem  :count-negative-numbers-in-a-sorted-matrix/
 // Difficulty: Easy
-// Link     : https://leetcode.com/problems/second-largest-digit-in-a-string/description/
+// Link     : https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/
 // ================================
-// Approach : iterate over string check if its number, then convert it to Num, then check if its grete then num, if yes then put it in first, and put ealier first value in second, else check if its smaller then first and greter then second then put it in second, lastly return second
-// Time     : O(n)
-// Space    : O(n)
-//
+// Approach : Iterate through the 2D array and count the number of negative numbers. Since the matrix is sorted, we can optimize the search by starting from the bottom-left corner and moving either right or up based on the value of the current element.
+// Time     : O(m+n) where m is the number of rows and n is the number of columns
+// Space    : O(1)
 // ================================
-function countNegatives(arr) {
-  // implement your solution here
-  if (!Array.isArray(arr)) return false;
 
-  return arr.reduce((acc, x) => {
-    if (!Number.isFinite(x)) return false;
-   return  (x < 0 ? acc + 1 : acc), 0
-  })
+function countNegative(grid) {
+  let sum = 0;
+  for (let i of grid) {
+    console.log("insode i" + i);
+    for (let j of i) {
+      console.log("insode j" + j);
+      if (j < 0) {
+        sum += 1;
+        console.log(sum);
+      }
+    }
+  }
+  console.log(sum);
 }
-
-module.exports = { countNegatives };
-
+const grid = [
+  [4, 3, 2, -1],
+  [3, 2, 1, -1],
+  [1, 1, -1, -2],
+  [-1, -1, -2, -3],
+];
+countNegative(grid);

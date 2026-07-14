@@ -10,8 +10,8 @@
 // ================================
 
 var secondHighest = function (s) {
-  let first = -1;
-  let second = -1;
+  let first = -Infinity;
+  let second = -Infinity;
   for (let i = 0; i < s.length; i++) {
     if (s[i] >= "0" && s[i] <= "9") {
       //checking if s[i] in number char
@@ -20,7 +20,7 @@ var secondHighest = function (s) {
         second = first;
         first = num;
       } else if (num < first && num > second) {
-        second = first;
+        second = num;
       }
     }
   }

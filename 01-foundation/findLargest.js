@@ -3,7 +3,7 @@
 // Difficulty: Easy
 // Link     : https://namastedev.com/practice/find-largest-number
 // ================================
-// Approach : Use a mathematical approach to reverse the integer. Extract digits one by one and build the reversed number. Handle the sign and check for overflow.
+// Approach : Use a single loop to iterate through the array and keep track of the largest number found so far. If a larger number is found, update the largest number. Return the largest number after the loop completes.
 // Time     : O(n)
 // Space    : O(1)
 //
@@ -15,7 +15,7 @@ function findLargest(arr) {
   if (flatArray.length === 0) return null;
 
   let largest = flatArray[0];
-  for (let i = 0; i < flatArray.length; i++){
+  for (let i = 0; i < flatArray.length; i++) {
     const value = flatArray[i];
     if (!Number.isFinite(value)) return false;
     if (largest < value) {
@@ -23,7 +23,7 @@ function findLargest(arr) {
     }
   }
 
-  return largest
+  return largest;
 }
 
 module.exports = { findLargest };
