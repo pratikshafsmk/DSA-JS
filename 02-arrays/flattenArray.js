@@ -1,5 +1,5 @@
 function FlattenArray(arr) {
-  let result = [];  
+  let result = [];
 
   for (let i = 0; i < arr.length; i++) {
     if (Array.isArray(arr[i])) {
@@ -12,9 +12,9 @@ function FlattenArray(arr) {
   return result;
 }
 
-input:[
-  {type:"fruit",name:"apple"},
-  {type:"fruit",name:"banana"},
-  {type:"vegetable",name:"carrot"},
-]
-output:{fruit:["apple","banana"],vegetable:["carrot"]}
+input: [
+  { type: "fruit", name: "apple" },
+  { type: "fruit", name: "banana" },
+  { type: "vegetable", name: "carrot" },
+];
+//output:{fruit:["apple","banana"],vegetable:["carrot"]}
