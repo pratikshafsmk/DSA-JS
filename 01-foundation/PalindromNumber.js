@@ -19,10 +19,10 @@ function isPalindromeNumber(x) {
   let original = x;
   let reversed = 0;
 
-  while (num < 0) {
-    let digit = num % 10;
+  while (x > 0) {
+    let digit = x % 10;
     reversed = reversed * 10 + digit;
-    num = Math.floor(num / 10);
+    x = Math.floor(x / 10);
   }
   return original === reversed;
 }

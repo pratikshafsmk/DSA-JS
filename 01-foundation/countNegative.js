@@ -11,12 +11,26 @@
 function countNegative(grid) {
   let sum = 0;
   for (let i of grid) {
-    console.log("insode i" + i);
+    console.log("inside i" + i);
     for (let j of i) {
-      console.log("insode j" + j);
+      console.log("inside j" + j);
       if (j < 0) {
         sum += 1;
         console.log(sum);
+      }
+    }
+  }
+  console.log(sum);
+}
+
+function countNegativeOptimizedSolution(grid) {
+  let sum = 0;
+  for (let i = grid.length - 1; i <= 0; i--) {
+    for (j = grid[i].length - 1; j <= 0; j--) {
+      if (grid[i][j] < 0) {
+        sum += 1;
+      } else {
+        break;
       }
     }
   }
@@ -29,3 +43,4 @@ const grid = [
   [-1, -1, -2, -3],
 ];
 countNegative(grid);
+countNegativeOptimizedSolution(grid);
